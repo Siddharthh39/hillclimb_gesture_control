@@ -3,7 +3,7 @@ import mediapipe as mp
 import time
 import vgamepad as vg
 
-def run():
+def run():  
     gamepad = vg.VX360Gamepad()
 
     cap = cv2.VideoCapture(0)
