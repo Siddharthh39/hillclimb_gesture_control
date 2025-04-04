@@ -4,7 +4,6 @@ import time
 import vgamepad as vg
 
 def run():
-    # Initialize virtual gamepad (Xbox 360 Controller)
     gamepad = vg.VX360Gamepad()
 
     cap = cv2.VideoCapture(0)
@@ -64,7 +63,7 @@ def run():
 
                 if is_index_finger_up(landmarks):
                     if now - last_action['jump'] > cooldown:
-                        # Map jump to A button
+                        # jump
                         gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_A)
                         gamepad.update()
                         gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_A)
@@ -73,7 +72,7 @@ def run():
                         print("🟢 Jump (A)")
                 elif is_two_fingers_up(landmarks):
                     if now - last_action['dash'] > cooldown:
-                        # Map dash to B button
+                        # dash 
                         gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_B)
                         gamepad.update()
                         gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_B)
@@ -82,7 +81,7 @@ def run():
                         print("🟡 Dash (B)")
                 elif is_ok_gesture(landmarks):
                     if now - last_action['climb'] > cooldown:
-                        # Map climb to X button
+                        # X button
                         gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_X)
                         gamepad.update()
                         gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_X)
@@ -91,7 +90,7 @@ def run():
                         print("🟣 Climb (X)")
                 elif is_open_hand(landmarks):
                     if now - last_action['right'] > cooldown:
-                        # Map open hand to D-Pad Right
+                        # Right
                         gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_RIGHT)
                         gamepad.update()
                         gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_RIGHT)
@@ -100,7 +99,7 @@ def run():
                         print("🔵 Right D-Pad")
                 elif is_fist(landmarks):
                     if now - last_action['left'] > cooldown:
-                        # Map fist to D-Pad Left
+                        # left
                         gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_LEFT)
                         gamepad.update()
                         gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_LEFT)
