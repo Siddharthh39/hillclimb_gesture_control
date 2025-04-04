@@ -9,7 +9,7 @@ def run():
     hands = mp_hands.Hands(max_num_hands=1)
     mp_draw = mp.solutions.drawing_utils
 
-    cooldown = 0.5  # seconds between actions
+    cooldown = 0.5  
     last_action = { 'a': 0, 'b': 0, 'shift': 0, 'right': 0, 'left': 0 }
 
     def is_fist(landmarks):
