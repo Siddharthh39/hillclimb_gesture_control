@@ -2,3 +2,4 @@ opencv-python
 mediapipe
 pynput
 PyQT6
+playsound
