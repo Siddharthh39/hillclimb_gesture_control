@@ -67,7 +67,6 @@ def process_frame():
                 lm = handLms.landmark
                 current_time = time.time()
 
-                # Cooldown-based actions (priority)
                 cooldown_gesture_triggered = False
                 for gesture, key, cooldown in [
                     ("two_fingers_up", "shift", 0.5),
@@ -82,9 +81,8 @@ def process_frame():
                         pyautogui.press(key)
                         last_times[gesture] = current_time
                         cooldown_gesture_triggered = True
-                        break  # only one cooldown gesture at a time
+                        break 
 
-                # Continuous key holds (only if no cooldown gesture is active)
                 if not cooldown_gesture_triggered:
                     if is_fist(lm):
                         if not pressing_keys["a"]:
