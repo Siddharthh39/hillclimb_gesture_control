@@ -1,6 +1,6 @@
 # 🎮 Gesture-Controlled Game Mod ✋  
 
-Control **Hill Climb Racing**, **GBA Emulator games**, and **Hollow Knight** using hand gestures via your webcam.  
+Control **Hill Climb Racing** and **Hollow Knight** using hand gestures via your webcam.  
 No controller, no keyboard – just gestures.
 
 ---
@@ -11,7 +11,6 @@ No controller, no keyboard – just gestures.
 - Interprets your gestures and sends simulated **keyboard** or **controller (vgamepad)** input.  
 - Works for:
   - 🏁 **Hill Climb Racing** (Gas/Brake)  
-  - 🎮 **GBA Emulator** games (Move, Jump, Attack, Sprint)  
   - 🏹 **Hollow Knight** (Move, Jump, Attack, Dash)  
 
 ---
@@ -20,27 +19,23 @@ No controller, no keyboard – just gestures.
 
 ### 🏁 Hill Climb Racing Mode  
 | Gesture        | Action         | Key |
-|---------------|---------------|-----|
+|---------------|----------------|-----|
 | 🖐️ Open Hand   | Press Gas      | →   |
 | ✊ Fist        | Press Brake    | ←   |
 
-### 🎮 GBA Emulator Mode (e.g., Pokémon)  
-| Gesture       | Action         | Key       |
-|--------------|---------------|-----------|
-| ☝️ Index Up   | Jump / Select | `A`       |
-| ✌️ Two Fingers Up  | Attack / Special | `B`       |
-| 👌 OK Gesture | Run / Sprint  | `Shift`   |
-| 🖐️ Open Hand  | Move Right    | →         |
-| ✊ Fist       | Move Left     | ←         |
-
 ### 🏹 Hollow Knight Mode  
-| Gesture       | Action        | Xbox Button (vgamepad) |
-|--------------|--------------|-------------------------|
-| ☝️ Index Up   | Jump         | `A`                     |
-| ✌️ Two Fingers Up  | Dash         | `RT`                    |
-| 👌 OK Gesture | Attack       | `X`                     |
-| 🖐️ Open Hand  | Move Right   | D-Pad Right             |
-| ✊ Fist       | Move Left    | D-Pad Left              |
+| Gesture           | Action        | Keyboard Key |
+|------------------|---------------|---------------|
+| ☝️ Index Up       | Jump          | `Space`       |
+| ✌️ Two Fingers Up | Dash          | `Shift`       |
+| 👌 OK Gesture     | Attack        | `X`           |
+| 🖐️ Open Hand      | Move Right    | `D`           |
+| ✊ Fist           | Move Left     | `A`           |
+| 🤟 Three Fingers Up | Special/Spell | `Z`         |
+| ✋ Palm Facing Camera | Open Map   | `Tab`         |
+| 👍 Thumb Up       | Heal          | `C`           |
+| 🤏 Pinch Gesture  | Spell Attack  | `V`           |
+| ✊ (Tilted Fist)  | Interact      | `F`           |
 
 ---
 
@@ -50,24 +45,3 @@ Install the required Python packages:
 
 ```bash
 pip install -r requirements.txt
-```
-
-Make sure you have:  
-- **ViGEmBus installed (for virtual gamepad support)**
-- **Hollow Knight running in focus**
-- **A webcam for hand tracking**
-
----
-
-## 🚀 Usage  
-
-Run the script and select your game mode:  
-
-```bash
-python main.py
-```
-
-Press `Q` to exit at any time.  
-
----
-
